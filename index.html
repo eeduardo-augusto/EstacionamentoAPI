@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Sistema de Controle de Estacionamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sistema de Controle de Estacionamento</h1>
+
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Reserva')">Reserva de Vaga</button>
+        <button class="tablink" onclick="openTab(event, 'Cadastro')">Cadastro de Veículos</button>
+        <button class="tablink" onclick="openTab(event, 'Consulta')">Consulta de Vagas</button>
+    </div>
+
+    <div id="Reserva" class="tabcontent">
+        <h2>Reserva de Vaga</h2>
+        <form id="reservaForm">
+            <label for="placaReserva">Placa do Veículo:</label>
+            <input type="text" id="placaReserva" required><br>
+
+            <label for="numeroApartamentoReserva">Número do Apartamento:</label>
+            <input type="number" id="numeroApartamentoReserva" required><br>
+
+            <label for="blocoApartamentoReserva">Bloco do Apartamento:</label>
+            <input type="text" id="blocoApartamentoReserva" required><br>
+
+            <label for="numeroVagaReserva">Número da Vaga:</label>
+            <input type="number" id="numeroVagaReserva" required><br>
+
+            <button type="submit">Reservar Vaga</button>
+        </form>
+    </div>
+
+    <div id="Cadastro" class="tabcontent">
+        <h2>Cadastro de Veículos</h2>
+        <form id="cadastroForm">
+            <label for="placaCadastro">Placa do Veículo:</label>
+            <input type="text" id="placaCadastro" required><br>
+
+            <label for="nomeProprietario">Nome do Proprietário:</label>
+            <input type="text" id="nomeProprietario" required><br>
+
+            <label for="modeloVeiculo">Modelo do Veículo:</label>
+            <input type="text" id="modeloVeiculo" required><br>
+
+            <label for="corVeiculo">Cor do Veículo:</label>
+            <input type="text" id="corVeiculo" required><br>
+
+            <button type="submit">Cadastrar Veículo</button>
+        </form>
+    </div>
+
+    <div id="Consulta" class="tabcontent">
+        <h2>Consulta de Vagas</h2>
+        <button id="mostrarTodas">Mostrar Todas as Vagas</button>
+        <button id="mostrarDisponiveis">Mostrar Vagas Disponíveis</button>
+
+        <table id="tabelaVagas">
+            <thead>
+                <tr>
+                    <th>Número da Vaga</th>
+                    <th>Placa</th>
+                    <th>Número do Apartamento</th>
+                    <th>Bloco</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
